@@ -1,0 +1,18 @@
+body {
+  font-family: sans-serif;
+}
+h1 {
+  color: black;
+  font-family: sans-serif;
+}
+code {
+  font-family: monospace;
+  color: red;
+}
+.sec-code {
+  color: green;
+}
+li {
+  background: black;
+  color: yellow;
+}
