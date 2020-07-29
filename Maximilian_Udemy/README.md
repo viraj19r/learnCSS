@@ -28,7 +28,7 @@ Types
 When working with margins, you can get unexpected results. 
 
 Why are two adjacent elements sharing one margin even though each element has its own one?
-Why does a parent element (e.g. <section>  as in the videos) suddenly take on the margin of the child element (e.g. <h1> )?
+Why does a parent element (e.g. `<section>`  as in the videos) suddenly take on the margin of the child element e.g. `<h1>`
 
 There, three base cases are described:
 
