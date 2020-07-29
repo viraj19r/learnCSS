@@ -1,9 +1,10 @@
 *{
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 body{
     font-family: sans-serif;
     margin: 0;
+    /* background: url("freedom.jpg"); */
 }
 
 #hello-section {
@@ -32,4 +33,73 @@ body{
 {
     color: black;
     font-family: "Anton", sans-serif;
+}
+
+.main-header{
+  background: rgb(101, 216, 86);
+  padding: 8px 16px;
+  width: 100%;
+}
+.main-header > div{
+  display: inline-block;
+  vertical-align: middle;
+}
+.main-nav{
+  display: inline-block;
+  text-align: right;
+  vertical-align: middle;
+  width: calc(100% - 74px);  /* calc fxn used to do mathematical operation on existing values*/
+}
+.main-nav__item {
+  display: inline-block;
+  margin: 0px 16px;
+  text-decoration: none;
+  
+}
+.main-nav__items{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+}
+.main-header__nav{
+   color: rgb(139, 91, 0);
+   text-decoration: none;
+   font-weight: bold;
+   font-size: 22px;
+   
+}
+.main-nav__item a {
+  text-decoration: none;
+  color: rgb(139, 91, 0);
+  font-weight: bold;
+  padding: 3px 0;
+}
+.main-nav__item a::after{
+  content :"  (Link)";
+  color :red;
+}
+/* adding pseudo classes */
+.main-nav__item a:hover,.main-nav__item a:active{
+color: aqua;
+border-bottom: solid 5px white;
+}
+p{
+  height: 500px;
+  background: url("freedom.jpg");
+}
+p::first-letter {
+  color: red;
+  font-size: 40px;
+}
+.main-nav__item-cta a{
+  color: white;
+  background: #ff1b86;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+.main-nav__item-cta a:hover{
+  border:none;
+  color: #ff1b86;
+  background: white;
 }
