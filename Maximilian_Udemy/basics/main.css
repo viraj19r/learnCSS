@@ -1,10 +1,24 @@
+*{
+  box-sizing: content-box;
+}
 body{
     font-family: sans-serif;
-    
+    margin: 0;
 }
 
 #hello-section {
   background: red;
+  padding: 20px;
+  width: 50%;
+  height: 100%;
+  border: 5px solid black;
+  /* set the width and height(box-sizing) properties only for content box only not for border and padding, we can all it to our whole page using the universal selector */
+  box-sizing: content-box;
+  /* same as above(shorthand syntax) */
+  /* border-style: solid; */
+  /* border-color: black; */
+  /* border-width: 5px; */
+  margin: 20px;
 }
 #feedback-section h1 {
   background: pink;
