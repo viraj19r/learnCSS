@@ -103,3 +103,6 @@ The element is only invisible, it's not removed from the document flow and of co
 #### pseudo classes and pseudo elements
 pseudo class allow us to define style of a **special state** of an element`:class name`
 pseudo elements allow us to define the style of a **specific part**  of a element`::element name`
+
+- If we use `!important` after any property's value ,then that property will override all the existing properties on that element. It is highly recommended not to use this.
+- `:not()` (It is a pseudo class)is used to exclude anything(the part which will be passed as argument will not be effected by the properties that we are going to set). 
