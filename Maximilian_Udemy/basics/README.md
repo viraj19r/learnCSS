@@ -1,6 +1,7 @@
 # Notes
 Cascading style sheets(CSS) is used to style pages(Latest version of CSS is CSS3)
-
+### what is viewport
+visible part of our app in browser window
 ### selectors in css
 - element selector(elements name)-- select all the elements present in the page with the name
 - class selector(.) -- more than one element can have same class
@@ -14,8 +15,6 @@ Cascading style sheets(CSS) is used to style pages(Latest version of CSS is CSS3
 - #id selectors
 - inline styles
 
-#### Inheritance 
-Inheriting the styles of parent elements. But have low priority then the child(original) one.
 #### Combinators
 Allows us to combine multiple selectors and then it will also create higher specificity
 Types
@@ -145,7 +144,82 @@ we can apply positioning properties to both inline and block elements
     - `fixed` - image will not be fixed to the content-container but for the viewport     
 - ShortHand syntax for background properties
     `background: background-image background-position/background-size background-repeat background-origin background-clip;` (if the values of background-origin and background-clip are same then we can replace these two values with only one value).
-   #### Styling Images 
+#### Gradient(linear or radial)
+ - linear gradient
+   - `background-image: linear-gradient(to bottom or left bottom(means diagonally) or 30 degrees(angle),red,blue)` first argument is direction of the gradient and if we leave it then the other all arguments will be color(among which the gradient occurs) 
+   - or we can also define percentage of each color along with it(red70%,yellow5%,green25%)
+
+ - radial gradient(that starts with certain shapes)
+   - `background-image: radial-gradient()` default is the ellipse shape.
+   - in its first argument we can define shapes(circle,etc) and also their places(circle at top, circle at top left, circle at 20% 30%) and also size(circle 20px at 20% 30%),(circle farthest-size(or closest size) at 20% 30%)
+
+#### Stacking Multiple backgrounds
+ 
+ - `background: url(..) url(..) linear-gradient() url(..) red  .........`
+ - image will be always prior to any color and gradient
+
+#### Filter css property
+  -  it lets us  apply graphical effects like blurring or color shifting to an element
+
+  -  `filter: value`
+  -  value
+    - url()
+    - blur(5px)
+    - contrast(200%)
+    - grayscale(80%);  
+    - hue-rotate(90deg)
+    - drop-shadow(16px 16px 0 red) 
+    - invert(75%)
+    - opacity(25%)
+    - saturate(34%)
+    - sepia(23%)
+  - we can also use multiple filters by separating them with a white space
+  - global values for `filter:inherit`,`filter:initial`,`filter:unset`
+
+#### SVG 
+we can add svg(their designed codes are available) in our html page and style them using the css
+*  background image is better than <img> when we want to use more style.
+
+## **Sizes** and **Units**
+- we should always design our product to be browser friendly(like when we zoom in or out or we change the browser font setting then our website fonts should be changed, that will not change if we use the percentage units or the unit that not that is not capable of doing it). In the scenario like that of font, we need to be very choosy about our unit selection and what is our requirement.
+
+| Units           | short notation used in css |
+| --------------- | -------------------------- |
+| pixel           | px                         |
+| percentage      | %                          |
+| root em         | rem                        |
+| em              | em                         |
+| viewport height | vh                         |
+| viewport width  | vw                         |
+
+* Where we use these units ?
+ - font-size
+ - padding
+ - border
+ - margin
+ - width
+ - height
+ - top
+ - bottom 
+ - left
+ - right
+
+| Absolute lengths                              | viewport lengths           | font-relative lengths  |
+| --------------------------------------------- | -------------------------- | ---------------------- |
+| mostly ignore user settings(browser settings) | adjust to current viewport | adjust to default size |
+| **px**                                        | **vh**                     | **rem**                |
+| cm                                            | vw                         | **em**                 |
+| mm                                            | vmin or vmax               | ..                     |
+|                                               | percentage(%)              | percentage(%)          |
+
+##### how does the percentage unit work and what does it refer to
+percentage value is decided on the basis of the container element of a current element(or we can say that the percentage value is taken in the reference of the container element), normally the container of an element is its parent element.
+* But in the case of `position:fixed` the container element becomes the **viewport**.
+* In case of `position:absolute` the container element becomes the **ancestor**. Now the percentage will refers to the [ancestor's content + padding] 
+
+
+
+
 
 
 
