@@ -109,7 +109,45 @@ pseudo elements allow us to define the style of a **specific part**  of a elemen
 
 ### Positioning elements(position:static(default value))
 
-property values: static,absolute,relative,fixed,sticky(new value).
-z-index
+`property values:` `static`,`absolute`,`relative`,`fixed`,`sticky`(new value).
+- `z-index`
 stacking context
 we can apply positioning properties to both inline and block elements
+
+### Background image and image
+- `background-image:url();` sets the background image
+- `background-size: value:` sets the background size of the elements(we can also specify both height and width)
+  - value
+    - `contain` - whole image will be contained in the image container
+    - `cover`- the image will cover the whole area of the viewport or window.
+    - `%`- we can specify values also in percentage
+    - `120px 110px` - we can set both height and width. 
+
+- `background-position:value;` - if we use value in `%` then the image will shift inside the container but if we use the value in `px` then the image will shift as per the given value.
+  - value
+    - `center`- center the image
+    - `left top`- image will be positioned towards top left(and also we can use all the possible combinations).instead of using we can also use the `%` values here
+- `background-repeat: value;` - controls whether the image should repeat or not
+  - value
+    - `no-repeat` - no repetition of image
+    - `repeat-x` - image will repeat in x-direction
+    - `repeat-y` - image will repeat in y-direction 
+- `background-origin: value;` - help us to manage the background image with border
+  - value
+    - `border-box` - border will be contained inside the image not outside the image
+    - `padding-box` - default behaviour  
+    - `content-box` - image will be inside the content box
+- `background-clip` - we will define how the image will actually clipped with border same property values as of background-origin property has.
+- `background-attachment` - define how the scrolling will behave in content box where background image is set
+  - value
+    - `scroll` - image will be able to scroll inside the container
+    - `local` - 
+    - `fixed` - image will not be fixed to the content-container but for the viewport     
+- ShortHand syntax for background properties
+    `background: background-image background-position/background-size background-repeat background-origin background-clip;` (if the values of background-origin and background-clip are same then we can replace these two values with only one value).
+   #### Styling Images 
+
+
+
+
+
