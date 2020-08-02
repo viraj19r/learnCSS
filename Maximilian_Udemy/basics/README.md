@@ -215,7 +215,8 @@ we can add svg(their designed codes are available) in our html page and style th
 ##### how does the percentage unit work and what does it refer to
 percentage value is decided on the basis of the container element of a current element(or we can say that the percentage value is taken in the reference of the container element), normally the container of an element is its parent element.
 * But in the case of `position:fixed` the container element becomes the **viewport**.
-* In case of `position:absolute` the container element becomes the **ancestor**. Now the percentage will refers to the [ancestor's content + padding] 
+* In case of `position:absolute` ,then the container element becomes the **ancestor's content + padding**. 
+* In case of `position:relative(or static)`, then the container element becomes the **ancestor's content ** only
 
 
 
