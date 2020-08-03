@@ -216,7 +216,43 @@ we can add svg(their designed codes are available) in our html page and style th
 percentage value is decided on the basis of the container element of a current element(or we can say that the percentage value is taken in the reference of the container element), normally the container of an element is its parent element.
 * But in the case of `position:fixed` the container element becomes the **viewport**.
 * In case of `position:absolute` ,then the container element becomes the **ancestor's content + padding**. 
-* In case of `position:relative(or static)`, then the container element becomes the **ancestor's content ** only
+* In case of `position:relative(or static)`, then the container element becomes the **ancestor's content** only
+* In case of height(and if the position is relative) we also need to define the height in the container element to be 100%(for ex when we create an backdrop inside a body element using div tag then we also need to define the height for body element and html element). Otherwise the the given height to our tag will not work.
+
+- We can define `min-width/height` and `max-width/height` for our element (like as image) so that the when we expand or shorten our container then the element will increase or decrease up to certain limit(as decided using min or max).
+
+- we use `em` and `rem` values for the font size so that when we change browsers setting for the fonts then the font of our page should also change.
+  - when we use `em` then it takes the value from its ancestor or sibling to multiply with the em value which might change according to the window size. Instead of `em`, `rem` always takes the reference of default browser value which is `16px` for the root element(html element). So we always use the `rem`. we use the `em` value only for the elements that are separate and independent. 
+- we can also use the `vh` or `vw` units for the height and width in place of `%`, both works same as `vh` and `vw` are also relative to the viewport
+
+ ##### Windows, Viewport Units & Scroll bars
+After adding vw , you probably saw that the scroll bars appeared in case you are working on Windows. This happens as using vw  on Windows does not include the scroll bars - `vw: 100`  is  equal to 100% of the viewport width`+` the scroll bars. On the Mac this is not an issue, but when using Windows it is as the scroll bars are displayed by default.
+
+In case you don't want to display these scroll bars, you can use one of these solutions:
+
+- Use width: 100%  instead of vw: 100
+
+- Add overflow-x: hidden;  to the body selector in the shared.css file to hide the horizontal scrollbar (or overflow-y: hidden  to hide the vertical scrollbar)
+
+Alternatively you could also use the ::-webkit-scrollbar pseudo element.
+```
+ body: :-webkit-scrollbar {
+    width: 0
+}
+```
+
+##### Recommended units to be used according to the properties
+|Property|Recommendation|
+|font-size(of root element)|`%`|
+|font-size|`rem`,`em`(only use for the children not for parent and others)|
+|padding and margin|`rem`|
+|border|`px`|
+|width and height|`%`,`vw`,`vh`|
+|top and bottom,left and right|`%`|
+
+
+
+
 
 
 
