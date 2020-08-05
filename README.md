@@ -8,6 +8,7 @@ visible part of our app in browser window
 - universal selector(*) -- selects all the elements inside the page
 - id selector(#)-- id should be unique for every element
 - attribute selector([attribute name])-- select all the elements having same attributes
+- [Advanced attribute selectors](https://www.w3schools.com/css/css_attribute_selectors.asp#:~:text=CSS%20%5Battribute%5E%3D%22value,to%20be%20a%20whole%20word!)
 
 ### Specificity(applying order for css selectors)[lowest to highest]
 - <tag> and ::pseudo-element selector
@@ -303,5 +304,38 @@ Syntax:
    `@media (min-width: 40rem), (orientation:landscape)`
    `@media (min-width: 40rem), (min-height: 60rem)`
 
+  #### Styling forms
+  - we can use the `:invalid` `:valid`pseudo classes to check our input in forms and design the form input element differently(like giving the red color to input box). And now the browser auto checks the input and apply the pseudo class to it(browser basically compares with the type attribute of our input tag).
+  - we can also add `required` attribute to our input tags, in this case the input should be mandatory otherwise the invalid pseudo class will be applied.
+  - we can use `:focus` pseudo class to change the style of the input box like outline and border when the box is active(when we are going to input something in it or clicked on it.
 
+#### Texts and Fonts
+Generic families vs font families
+Generic families includes some type of font families that further contain many types of fonts(like as **serif** --- Times New Roman ,Georgia,etc; **sans-serif** --- Helvetica,Verdana,etc;**cursive**--- Brush Script , Mistral,etc;**monospace** --- Courier New, Lucida Bright,etc;**fantasy**).
+
+Font Properties
+- `font-variant` can set different variants of font
+- `font-stretch` stretching of the letters
+- `letter-spacing` defines space between the letters
+- `white-space` if we set it to `no-wrap` then the entire text will be displayed in the one line and if we set it to `pre` then text will be displayed as in the html file and we also have `pre-wrap` ,`pre-line`(all lines will be filled as much possible).
+- `line-height` defines the height of a line(values are normal,numerical values(recommended) = 1,2,3... and percentages = 100%,200%)
+- `text-decoration` values = underline,overline,line-through dotted,wavy(extra specification) red(color specification)
+- `text-shadow` value = 5px(offset x-axis) 5px(offset to the y-axis) 2px(blur) gray(color)
+- Shorthand property font: font-style font-variant font-weight font-size/line-height font-family
+- `font-display` and loading performance
+  - values;
+  - swap --Gives the font face an extremely small block period and an infinite swap period.
+  - block -- Gives the font face a short block period and an infinite swap period.
+  - fallback--Gives the font face an extremely small block period and a short swap period.
+  - optional--Gives the font face an extremely small block period and no swap period.
+  - auto (default) 
+
+
+## Flexbox 
+- It allow us to change the way our elements are displayed.
+- To create a **flex container** we will give the value flex to the display property
+`display: flex;` , and the children's inside the flex container are **flex items**
+- Once we have created the flexbox we can now apply following properties
+  - Properties for flex container(parent)-- `flex-flow`,`justify-content`,`align-content`,`align-items` 
+  - Properties for flex items(children)-- `order`,`flex`,`align-self`
 
