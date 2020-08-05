@@ -336,6 +336,29 @@ Font Properties
 - To create a **flex container** we will give the value flex to the display property
 `display: flex;` , and the children's inside the flex container are **flex items**
 - Once we have created the flexbox we can now apply following properties
-  - Properties for flex container(parent)-- `flex-flow`,`justify-content`,`align-content`,`align-items` 
+  - Properties for flex container(parent)-- `flex-flow`-shorthand for(`flex-direction`,`flex-wrap`),`justify-content`,`align-content`,`align-items` ,
   - Properties for flex items(children)-- `order`,`flex`,`align-self`
+  #### Main axis vs cross axis
+  - if we create a flexbox with `flex-direction;row` then the main axis will be from left(top) to right and the cross axis will be from top(left) to bottom
+  - if we create a flexbox with `flex-direction;row-reverse` then the main axis will be from right(top) to left and the cross axis will be from top(right) to bottom
+  - if we create a flexbox with `flex-direction;column` then the main axis will be from top(left) to bottom and the cross axis will be from left(top) to right
+  - if we create a flexbox with `flex-direction;column-reverse` then the main axis will be from bottom(left) to top and the cross axis will be from left(bottom) to right
 
+- `justify-content` works along main axis and `align-items` work along cross axis
+- we can use `align-content` to align content along the cross axis(all content inside the flex container will be aligned as per the property value)
+
+>Flexbox and the Z-Index
+>In the position module we learned that adding the z-index  to an element only has an  >effect, if the position  property with a value different from static  was applied to this >element.
+>One exception from this behaviour is flexbox: Applying the z-index  to flex-items (so the >elements inside of the flex-container) will change the order of these items even if no >position  property was applied.
+
+- Flex items properties
+  - `order:0` it decides the order of the flex item among all flex items
+  - `align-self:0` (0 is default value)we can also align particular items among all flex items using it
+  - `flex` properties for items
+    - `flex-grow:0`(default value) now if we increase its value for flex item and then if we increase the size of our window/viewport then this item(size) will also increase/grow(can say) using the extra space available. With the help of number as values, we can set/priorities which element will grow more or less. if we use it with `flex-wrap:wrap;` then it will change the line and occupies the full space in the next available line/space.
+    - `flex-shrink:0` (default value) its opposite of flex-grow, it shrinks the flex item when the window size shrinks.If we specify greater values then they also tells the the flex items how much should it shrink comparative to other items.
+    - `flex-basis:1`(default value- allow to shrink as it is 1) It basically defines the size of the flex item depending on the main axis(along the flex-direction).we can also use `%` values as we used for width and height.
+      - if our main axis is from left to right then it will define and set width of flex item
+      - if our main axis is from top to bottom then it will define and set the height of the flex item 
+      - flex-basis always override the width and height properties
+    - flex shorthand property `flex:flex-grow flex-shrink flex-basis;`
