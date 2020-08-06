@@ -367,7 +367,9 @@ Font Properties
 - firefox has better developer tools for css grid than chrome's developer tools
 - we can add grid container as `display: grid`
   - `grid-template-columns: 200px 300px 20%(of surrounding container) 1fr(fraction)...;` as much columns as we want, fraction takes the remaining space. If we sets the units to `auto` then it takes the space as much as the element requires only in the case when height and width properties are not defines, if they are defined then the element will cover all the remaining space.
-  - `grid-template-rows: 5rem 2rem ....;`
+  `grid-template-rows: 5rem 2rem ....;`
+
+
   - positioning child elements in a row(using some properties for containers items/child)
     -  we can set for the elements from where to start and where to end using the `grid-column-start:` and `grid-column-end:`,`grid-row-start` and `grid-row-end`properties.
     -  To occupy the whole columns and rows, we use `grid-column-end: span 2(as much as we want);` and `grid-row-end: span 2;`to span two elements in one
@@ -377,4 +379,45 @@ Font Properties
   - we can also set minimum and maximum heights and width for the respective rows and columns using the `minmax()` function as for row we can set height
     - `grid-template-row: 5rem minmax(10px 200px)`; 
 
-- we can name row and column lines also by simply adding the names in square brackets as `grid-template-row:[row-1-start] 5rem [row-1-end row-2-start]minmax(10px 200px)` , we can also give multiple names to the lines by separating the names with a space.And now we can specify these names in the `grid-row-start`  and `grid-row-end` properties to grid the elements as we need
+
+- we can name row and column lines also by simply adding the names in square brackets as `grid-template-row:[row-1-start] 5rem [row-1-end row-2-start]minmax(10px 200px)` , we can also give multiple names to the lines by separating the names with a space.And now we can specify these names in the `grid-row-start`  and `grid-row-end` properties to grid the elements as we need. If we are using the repeat property to make rows and columns then we can give a general name to them(like as col-start/end or row-start/end) and later access them by adding a number(which is the no of that line from start) after general name with a space.
+
+
+- Shorthand for `grid-column-start:1;` and `grid-column-end:-1;` is `grid-column:1/-1;` and same for `grid-row-start:1`  and `grid-row-end:-1` is `grid-row:1/-1;`. There is also and property named `grid-area` which is shorthand for all above four properties as `grid-area: grid-row-start/grid-row-start/grid-row-end/grid-column-end;`
+
+
+- `grid-column-gap` and `grid-row-gap` allow us to define the gaps between columns and rows
+- shorthand for gap is `grid-gap:grid-row-gap grid-column-gap;`
+- there is a method `fit-content(8px)` now the content will be fit in 8px, we can use this method inside the `grid-template-rows` and `grid-template-columns` whenever required.
+
+
+##### Named template areas in grid
+we will define the `grid-template-area` in the element where we use the `display:grid`
+and then later we use these defined areas in `grid-area` properties of grid items to arrange them.
+
+- we can also position grid items by using the property`justify-items: center;`(for positioning inside the row) other values: `start`,`end`,`stretch`
+- justify for x-axis and align for y-axis
+- To position in the columns `align-items: center;`(other values;`start`,`end`,`stretch`)
+- To position the entire grid and its content(grid items) `justify-content:center;` and `align-content: start;` 
+- To position elements(grid item) individually we go to the element selector and use `justify-self: center;` property
+  
+
+- For responsive web design we need to add media queries with more rows in the grid
+- if we have a blog like page where new blogs are added then in this case we can add a **autoflow** properties to the grid like `grid-auto-rows:auto` and there we can set the size of rows which will be created. and we can add `grid-auto-flow: column(or row) dense` in this case the new item will be added along the column and flow of the page will also be along the column. these are part of implicit grid. we can also add `dense` here so that if a item occupies a double row or column then an another item will get that place.
+
+
+- the grid which we define are explicit grids and the grids which is added by user dynamically or any other method then the grid is called implicit grid .In case like that where the rows and columns are added dynamically we can use `auto-fill` inside the `repeat()` method in place of where we define the no of rows and columns and we can also use `auto-fit ` which will then also centers the items and if there is not space it will also put them in new line and fit inside the page, this is good for the case when we don't have enough items to fill in the page
+
+> * we use grids when we need 2 dimensional positioning and flexbox when only needed 1 dimensional positioning
+
+
+### Transforming CSS elements
+- We transform the element using the `transform: rotateZ(45deg);`property 
+- we can change the origin using `transform-origin: center;`(default value)
+- we can use `translateX()` and `translateY()` function as value of `transform` property to move element right or left(left and right along the axis of the element which is transformed)
+- we can use `skewX()` and `skewY()` function as value of `transform` property to skew elements at some angle or we can use shorthand `skew(value for x,value for y)`
+- Along with skew we can also use `scaleX()` and `scaleY()` which will increase the size of the element along the defined axis
+- we can also transform 3d using the `rotateX() rotateY() rotate()` function as a value of the transform element. we can use `perspective()` function to see the rotation as it gives clear visualization to us for the 3d transformation
+- in 3d transformation we can also use `translateZ()` to translate along z-axis
+- we can preserve the value of the 3d rotation using the `transform-style: preserve-3d;`
+- To hide the back face of an element we use `backface-visibility:  hidden;`
