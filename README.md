@@ -362,3 +362,5 @@ Font Properties
       - if our main axis is from top to bottom then it will define and set the height of the flex item 
       - flex-basis always override the width and height properties
     - flex shorthand property `flex:flex-grow flex-shrink flex-basis;`
+
+## Grid
