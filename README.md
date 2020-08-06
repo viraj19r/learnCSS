@@ -364,3 +364,17 @@ Font Properties
     - flex shorthand property `flex:flex-grow flex-shrink flex-basis;`
 
 ## Grid
+- firefox has better developer tools for css grid than chrome's developer tools
+- we can add grid container as `display: grid`
+  - `grid-template-columns: 200px 300px 20%(of surrounding container) 1fr(fraction)...;` as much columns as we want, fraction takes the remaining space. If we sets the units to `auto` then it takes the space as much as the element requires only in the case when height and width properties are not defines, if they are defined then the element will cover all the remaining space.
+  - `grid-template-rows: 5rem 2rem ....;`
+  - positioning child elements in a row(using some properties for containers items/child)
+    -  we can set for the elements from where to start and where to end using the `grid-column-start:` and `grid-column-end:`,`grid-row-start` and `grid-row-end`properties.
+    -  To occupy the whole columns and rows, we use `grid-column-end: span 2(as much as we want);` and `grid-row-end: span 2;`to span two elements in one
+    -  to cover the whole line we can also use negative values such as `grid-row-end: -1;`
+
+  - To create columns and row of same sizes we can use `repeat()` method`grid-template-columns:repeat(4, 25%)` first argument is for no of times it should repeat and second will be the size of the row of column. we can pass multiple second arguments, if we do so then the arguments passed will be considered as the sizes and they will be used as many times repetitively as we specify with the first argument. 
+  - we can also set minimum and maximum heights and width for the respective rows and columns using the `minmax()` function as for row we can set height
+    - `grid-template-row: 5rem minmax(10px 200px)`; 
+
+- we can name row and column lines also by simply adding the names in square brackets as `grid-template-row:[row-1-start] 5rem [row-1-end row-2-start]minmax(10px 200px)` , we can also give multiple names to the lines by separating the names with a space.And now we can specify these names in the `grid-row-start`  and `grid-row-end` properties to grid the elements as we need
