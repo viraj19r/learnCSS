@@ -478,6 +478,52 @@ Possible timing function values are: ease-out , ease-in , linear , cubic-bezier(
   - bootstrap - component framework
   - tailwind - utility framework
 
+#### SASS
+sass/scss is super set for the css which contain more feature than the css to make everything easy and clear. sass should be converted in the css because browser's only understand css.
+- We can define reusable code with sass
+- // is used in sass for commenting
+- if we name our file with .sass then we must not use the curly braces and semi colons, because they are not supported in sass but we must use the indentation
+- if we name our file with .scss then we can use curly braces and semi colons
+- if we want to define properties for any child element then it can be defined without using the combinator, we can simply put the child's selector inside the parent selector by using the normal syntax we use for selecting the elements but now inside the parents selectors body.
+
+
+- nesting the properties in sass
+   - example- we have defined the properties as `flex-direction: column;` `flex-wrap: nowrap`
+   - we can using nesting as ` flex: { direction: column; wrap:nowrap;} `
+
+
+- variable in sass allows us to define a certain value and reuse it around our code (variable should be defined at the top of the file so that it can be used everywhere)
+   - declaring a variable for color(which will be used max in our code) `$main-color: red;`.we can store any of the property value in variables.
+   - lists and maps can also be stored in variables(list- that store more than one value, like when we define box shadow, there are many values),(map is a list in which each item has name by which we can access it. )
+     - storing list in variable `$border-default: 0.05rem solid black;`
+     - storing map in variable `$colors: (main: red, secondary: green, tertiary: yellow)`
+       - accessing map value by map-get method as `map-get($colors,main)`
+
+
+- there are many built in functions in sass that makes styling easier
+- we can do some arithmetic's with sass like with units `padding: $size-default * 3;`(for sass $size-default = 1rem) now it will calculate it as 3rem
+- In sass we can nest media queries in the element for which we created them
+- Inheritance in sass - the code which is repeated in different selectors, we will write a class selector and write down the repeating code(also media queries) in it and inherit that newly written class using `@extends ` followed by the class name inside the selector where we need to inherit.
+- Mixins are functions that we create to shorten the code. we can define mixin as follows
+    ```
+       @mixin display-flex($passAnArgument){
+         display: flex;
+         display: -webkit-flex;
+         size: $passAnArgument
+         @content
+       }
+    ```   
+    And now we can use it where we want as 
+    `@include display-flex(40rem);`
+    second example
+    ```
+       @include display-flex(40rem){
+         // everything here will be stored inside the @content
+       }
+    ```
+- we can also nest the pseudo classes using the ampersand operator as `&:hover,&:active {....}`       
+    
+
 
 
 
