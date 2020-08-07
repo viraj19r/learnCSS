@@ -388,6 +388,7 @@ Font Properties
 
 - `grid-column-gap` and `grid-row-gap` allow us to define the gaps between columns and rows
 - shorthand for gap is `grid-gap:grid-row-gap grid-column-gap;`
+  
 - there is a method `fit-content(8px)` now the content will be fit in 8px, we can use this method inside the `grid-template-rows` and `grid-template-columns` whenever required.
 
 
@@ -421,3 +422,63 @@ and then later we use these defined areas in `grid-area` properties of grid item
 - in 3d transformation we can also use `translateZ()` to translate along z-axis
 - we can preserve the value of the 3d rotation using the `transform-style: preserve-3d;`
 - To hide the back face of an element we use `backface-visibility:  hidden;`
+
+#### Transition 
+ `transition` property is used for the transition of a element, as a value of this property we can use transform,the property that will be effected(ex- width), opacity,etc
+ 
+`transition: WHAT DURATION DELAY TIMING-FUNCTION; `
+Example:
+`transition: opacity 200ms 1s ease-out; `
+Can be translated to: "Animate any changes in the opacity  property (for the element to which the transition  property is applied) over a duration of 200ms. Start fast and end slow, also make sure to wait 1s before you start".
+
+Instead of this shorthand, we can also specify the four individual properties:
+
+1. [transition-property](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property) => `transition-property: opacity; `
+
+2. [transition-duration](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration) => `transition-duration: 200ms;` 
+
+3. [transition-timing-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function) => `transition-timing-function: ease-out;` 
+
+Possible timing function values are: ease-out , ease-in , linear , cubic-bezier()  and a couple of others.
+
+4. [ transition-delay](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay) => `transition-delay: 1s;`
+
+#### Animation
+
+- we can say animation as transition++. Transition only defines effect for only initial and final point but animation can define effect for multiple phases using the `@keyframe`
+- `animation: NAME DURATION DELAY TIMING-FUNCTION ITERATION DIRECTION FILL-MODE PLAY-STATE;`
+
+Example:
+`animation: wiggle 200ms 1s ease-out 8 alternate forwards running; `
+Can be translated to: "Play the wiggle keyframe set (animation) over a duration of 200ms. Between two keyframes start fast and end slow, also make sure to wait 1s before you start. Play 8 animations and alternate after each animation. Once you're done, keep the final value applied to the element. Oh, and you should be playing the animation - not pausing." 
+
+Instead of this shorthand, we can also specify the individual properties:
+
+1. [animation-name  ](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name) => animation-name: wiggle; 
+
+2. [animation-duration  ](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-duration) => `animation-duration: 200ms;` 
+
+3. [animation-timing-function ](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function) => `animation-timing-function: ease-out;` 
+
+Possible timing function values are: ease-out , ease-in , linear , cubic-bezier()  and a couple of others. See the above link for more details.
+
+4. [animation-delay  ](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay) => `animation-delay: 1s;` 
+
+5. [animation-iteration-count  ](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count) => `animation-iteration-count: 8; `
+
+6. [animation-direction  ](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction) => `animation-direction: alternate;` 
+
+7. [animation-fill-mode  ](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode) => `animation-fill-mode: forwards;` 
+
+8. [animation-play-state  ](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state) => `animation-play-state: running;` 
+
+- we can use `@supports (display: grid){}` to check whether our code supports the the functionality, if not the code inside the curly braces will not run
+- In case any property is not supported then we can specify another with the help of the css variables
+- CSS frameworks
+  - bootstrap - component framework
+  - tailwind - utility framework
+
+
+
+
+
