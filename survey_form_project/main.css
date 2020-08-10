@@ -1,0 +1,74 @@
+body {
+  background-image:url("../survey_form_project/css-lattice-pattern.png");
+  color: white;
+}
+main{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+#title{
+}
+#description{
+
+}
+#survey-form{
+width: 50vw;
+display: flex;
+flex-direction: column;
+background-color: rgb(74, 74, 190);
+padding: 1.5rem;
+border-radius: 3px;
+
+}
+#name-label{
+    
+}
+#name{
+border-radius: 4px;
+margin-bottom: 1rem;
+}
+#email-label{
+
+}
+#email{
+    border-radius: 4px;
+    margin-bottom: 1rem;
+
+}
+#number-label{
+
+
+}
+#number{
+    border-radius: 4px;
+    margin-bottom: 1rem;
+
+}
+#dropdown{
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+fieldset{
+    margin: 1rem;
+    padding: 1rem;
+    border: none;
+    
+    
+}
+#comment-area{
+    margin: 1rem;
+}
+#submit{
+    width: 90%;
+    align-self: center;
+    background-color: green;
+    color: white;
+    border-radius: 0.4rem;
+    height: 2rem;
+}
+
+
