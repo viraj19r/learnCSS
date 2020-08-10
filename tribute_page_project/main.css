@@ -1,0 +1,31 @@
+*{
+  font-family: sans-serif;
+  text-align: center;
+}
+#main {
+  background-color: rgb(202, 200, 200);
+}
+#title {
+  text-align: center;
+}
+#title-desc {
+  text-align: center;
+}
+#img-div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: white;
+  margin: 1rem;
+  align-content: center;
+}
+#image {
+  align-self: center;
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  max-width: 100%;
+}
+#name-of-author {
+  text-align: right;
+}

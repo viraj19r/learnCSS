@@ -344,6 +344,19 @@ Font Properties
   - optional--Gives the font face an extremely small block period and no swap period.
   - auto (default) 
 
+- The `text-transform` property in CSS is used to change the appearance of text. It's a convenient way to make sure text on a webpage appears consistently, without having to change the text content of the actual HTML elements.
+
+The following table shows how the different `text-transform` values change the example text "Transform me".
+
+| Value      | Result                                               |
+| ---------- | ---------------------------------------------------- |
+| lowercase  | "transform me"                                       |
+| uppercase  | "TRANSFORM ME"                                       |
+| capitalize | "Transform Me"                                       |
+| initial    | Use the default value                                |
+| inherit    | Use the text-transform value from the parent element |
+| none       | Default: Use the original text                       |
+
 
 ## Flexbox 
 - It allow us to change the way our elements are displayed.
