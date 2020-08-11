@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Documentation</title>
+  <link rel="stylesheet" href="../technical_documentation_page/main.css">
+</head>
+
+<body>
+  <main id="main-doc">
+    <section class="main-section" id="CSS_Introduction">
+      <header>CSS Introduction</header>
+      <article>
+        <p>What is CSS?</p>
+        <ul>
+          <li>CSS stands for Cascading Style Sheets</li>
+          <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+          <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+          <li>External stylesheets are stored in CSS files</li>
+        </ul>
+        <p>Why Use CSS?</p>
+        <p>CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.</p>
+        <h3>CSS Solved a Big Problem</h3>
+        <p>HTML was NEVER intended to contain tags for formatting a web page!
+
+          HTML was created to describe the content of a web page, like:
+
+          <h1>This is a heading</h1>
+
+          <p>This is a paragraph.</p>
+
+          When tags like <code>font</code> , and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="CSS_Syntax">
+      <header>CSS Syntax </header>
+      <article>
+        <p>A CSS rule-set consists of a selector and a declaration block:
+        </p>
+        <ul>
+          <li>The selector points to the HTML element you want to style.
+
+          </li>
+          <li>The declaration block contains one or more declarations separated by semicolons.
+
+          </li>
+          <li>
+            Each declaration includes a CSS property name and a value, separated by a colon.
+
+          </li>
+          <li>Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.</li>
+        </ul>
+        <p>
+          <code>p {
+            color: red;
+            text-align: center;
+            }</code>
+        </p>
+        <p>Example Explained
+        </p>
+        <ul>
+          <li> <code>p</code> is a selector in CSS (it points to the HTML element you want to style:
+          </li>
+          <li><code>color</code> is a property, and red is the property value
+          </li>
+          <code>text-align</code> is a property, and center is the property value
+
+        </ul>
+      </article>
+    </section>
+    <section class="main-section" id="CSS_Selectors">
+      <header>CSS Selectors</header>
+      <article>
+        <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.
+
+          We can divide CSS selectors into five categories:</p>
+        <ul>
+          <li>Simple selectors (select elements based on name, id, class)
+          </li>
+          <li>Combinator selectors (select elements based on a specific relationship between them)
+          </li>
+          <li>Pseudo-class selectors (select elements based on a certain state)
+          </li>
+          <li>Pseudo-elements selectors (select and style a part of an element)
+          </li>
+          <li>Attribute selectors (select elements based on an attribute or attribute value)
+          </li>
+        </ul>
+        <p>The CSS element Selector</p>
+        <p>Here, all p elements on the page will be center-aligned, with a red text color:
+
+        </p>
+        <code>p {
+          text-align: center;
+          color: red;
+          }
+        </code>
+      </article>
+    </section>
+    <section class="main-section" id="CSS_Comments">
+      <header>CSS Comments</header>
+      <article>
+        <p>Comments are used to explain the code, and may help when you edit the source code at a later date.
+          Comments are ignored by browsers.
+          A CSS comment is placed inside the style element, and starts with /* and ends with */:</p>
+        <p>
+          <code>/* This is a single-line comment */
+            p {
+            color: red;
+            }</code>
+        </p>
+        <p>Comments can also span multiple lines:
+          <code>/* This is
+            a multi-line
+            comment */
+
+            p {
+            color: red;
+            }</code>
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="CSS_Backgrounds">
+      <header>CSS Backgrounds</header>
+      <article>
+        <p>The background-color property specifies the background color of an element.</p>
+        <p>The opacity property specifies the opacity/transparency of an element. It can take a value from 0.0 - 1.0. The lower value, the more transparent:</p>
+        <code>div {
+          background-color: green;
+          opacity: 0.3;
+          }</code>
+      </article>
+    </section>
+  </main>
+  <aside id="sidebar">
+    
+    <nav id="navbar">
+      <header id="nav-header">CSS Documentation</header>
+      <a href="#CSS_Introduction" class="nav-link">CSS Introduction</a>
+      <a href="#CSS_Syntax" class="nav-link">CSS Syntax</a>
+      <a href="#CSS_Selectors" class="nav-link">CSS Selectors</a>
+      <a href="#CSS_Comments" class="nav-link">CSS Comments</a>
+      <a href="#CSS_Backgrounds" class="nav-link">CSS Backgrounds</a>
+      
+    </nav>
+  </aside>
+</body>
+
+</html>
