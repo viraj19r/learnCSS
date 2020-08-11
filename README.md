@@ -548,7 +548,15 @@ sass/scss is super set for the css which contain more feature than the css to ma
          // everything here will be stored inside the @content
        }
     ```
-- we can also nest the pseudo classes using the ampersand operator as `&:hover,&:active {....}`       
+- we can also nest the pseudo classes using the ampersand operator as `&:hover,&:active {....}`      
+
+
+
+# [all css properties](https://www.w3.org/Style/CSS/all-properties.en.html)
+# [css properties mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference)
+# [css properties html dog](https://htmldog.com/references/css/properties/)
+# [css properties w3 schools](https://www.w3schools.com/cssref/)
+
     
 
 

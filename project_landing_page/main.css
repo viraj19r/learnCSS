@@ -1,0 +1,154 @@
+body {
+  width: 100vw;
+  font-family: sans-serif;
+  overflow-x: hidden;
+  margin: auto;
+}
+
+#header {
+  min-height: 65px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: bisque;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#header-img-cont {
+  height: 100%;
+  margin: 0 1.5rem;
+}
+#header-img {
+  height: 100%;
+  border-radius: 4px;
+  padding: 2px;
+  margin-top: 2px;
+}
+#nav-bar {
+  margin: 0 3rem;
+}
+.nav-link {
+  text-decoration: none;
+  color: black;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+#main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  margin-right: 1rem;
+  background-color: rgb(247, 231, 213);
+  margin-right: 0;
+  font-size: small;
+  align-items: center;
+  padding: 1rem;
+}
+#main-heading > h1 {
+  color: brown;
+}
+#form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+#email-label {
+  align-self: center;
+  color: brown;
+  margin: 0.5rem;
+  font-weight: bold;
+}
+#email {
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid gray;
+  margin: 0.5rem;
+  width: 80%;
+}
+#submit {
+  width: 40%;
+  color: white;
+  background-color: rgb(240, 101, 101);
+  border: 0;
+  border-radius: 6px;
+  margin: 0.5rem;
+  padding: 6px;
+}
+
+#video-box h4 {
+  color: brown;
+}
+#video {
+  max-width: 100%;
+}
+#footer {
+  width: 100%;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  min-height: 40px;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+}
+#footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#footer-nav > a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+}
+@media (max-width: 26rem) {
+  #header {
+    min-height: 45px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    background-color: bisque;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  #header-img {
+    height: 30%;
+  }
+  #header-img > img {
+    height: 60%;
+    width: 100%;
+  }
+  #nav-bar {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .nav-link {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    margin: 2px;
+    padding: 2px;
+  }
+  #main {
+    margin-top: 2rem;
+  }
+}
+@media (min-width: 50rem) {
+  #video-box h4 {
+    color: brown;
+    padding-right: 1rem;
+    margin-right: 1rem;
+  }
+}
